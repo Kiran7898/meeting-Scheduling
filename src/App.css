@@ -1,0 +1,323 @@
+
+.navlogo{
+  height: 16px;
+  width: 18px;
+}
+
+
+/* Remove border from the entire calendar */
+
+.pop-c{
+  background-color: blue;
+  
+}
+/* total cal */
+.react-calendar {
+  height: 30%;
+  width: 350px;
+  max-width: 100%;
+  background: white;
+  border: 0px solid #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+  row-gap: 5rem;
+  margin: -0.5em;
+  margin-top: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+
+}
+/* date buttons */
+.react-calendar button {
+margin: 0;
+border: 0;
+outline: none;
+
+
+}  
+
+.react-calendar button:enabled:hover {
+cursor: pointer;
+}
+
+/* month year */
+.react-calendar__navigation {  
+display: flex;
+height: 44px;
+margin-bottom: 1em;
+width: 70%;
+margin-left: 3.5rem;
+
+
+}
+
+.react-calendar__navigation button {
+min-width: 44px;
+background: none;
+color:rgb(107, 107, 107);
+padding: 0rem;
+}
+
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+background-color: #d2dee5;
+height:45px;
+border-radius:30%;
+color:#2160ce;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+width:45px;
+
+}
+/* weeks */
+.react-calendar__month-view__weekdays {
+text-align: center;
+text-transform: uppercase;
+font: inherit;
+font-size: 0.75em;
+font-weight: 500;
+color:gray;
+padding: 0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+padding: 0.5em;
+;
+}
+
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+display: flex;
+align-items: center;
+justify-content: center;
+font: inherit;
+font-size: 0.75em;
+font-weight: 500;
+background-color: #053fff;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+background-color: #053fff;
+color: #ffffff;
+border-color: #000000;
+/* height:50px; 
+border-radius:50%;
+
+  -moz-border-radius:50%;
+-webkit-border-radius:50%;
+width:50px; */
+}
+
+
+.weekday {
+color: gray;
+}
+
+.weekend {
+color: gray;
+}
+
+
+.react-calendar__month-view__weekdays__weekday {
+padding: 1rem;
+}
+
+.react-calendar__tile {
+max-width: 100%;
+padding: 1rem 6.6667px;
+
+background: rgb(255, 255, 255);
+text-align: center;
+line-height: 16px;
+font: inherit;
+font-size: 15px;
+}
+.valid-date{
+background-color: rgb(223, 246, 255);
+color: rgb(0, 9, 248);
+font-weight: bold;
+font-size: 15px;
+padding: 1rem;
+margin: 1rem;
+
+height:50px;
+border-radius:50%;
+border-color: #ffffff;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+width:50px;transition: background-color 0.3s, color 0.3s;
+}
+
+
+
+.valid-date--active:hover {
+background-color: #053fff; /* Change background color when hovered and active */
+color: #ffffff; /* Change text color when hovered and active */
+}
+
+.react-calendar__month-view__days__day--weekend {
+color:grey;
+}
+.react-calendar__tile--now {
+background: rgb(223, 246, 255);
+color: rgb(0, 9, 248);
+height:50px;
+border-radius:50%;
+border-color: #d60303;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+width:50px;
+font-weight: bold;
+
+}
+
+.react-calendar__tile--now--active:enabled:hover,
+.react-calendar__tile--now--active:enabled:focus {
+background-color: #053fff;
+color: #ffffff;
+border-color: #000000;
+
+}
+
+
+.valid-date:enabled:hover,
+.valid-date:enabled:focus,
+.valid-date:enabled:active{
+background:  rgb(172, 215, 246);
+}
+
+.valid-date:enabled:active{
+background:  rgb(0, 8, 255);
+}
+.valid-date--active {
+background-color: #053fff; /* Change background color when active */
+color: #ffffff; /* Change text color when active */
+}
+
+.valid-date--hasActive:enabled:hover,
+.valid-date--hasActive:enabled:focus {
+background: #09aed7;
+
+}
+
+.time-slots-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-width: 200px;
+  height: 30rem;
+  width: 10rem;
+  background-color: #ffffff;
+  position: relative;
+  scrollbar-width: 0px; /* Set the width of the scrollbar */
+  scrollbar-color: #5f5f5f transparent;
+  
+}
+
+
+
+.time-slots {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 5px;
+  margin: 5px;
+  overflow-x: hidden;
+}
+
+.time-slot {
+  font-weight: 500;
+  padding: 15px 19px;
+  margin: 4px;
+  background-color: #ffffff;
+  border: 1px solid blue;
+  color: #053fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 10rem;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.time-slot:hover {
+  border: 2px solid blue;
+}
+
+.box {
+  width: calc(50% - 3px); /* Adjusted for the 3px gap */
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%); /* Initially position the boxes off-screen */
+}
+
+.brown {
+  background-color: brown;
+  left: 0;
+}
+
+.blue {
+  background-color: blue;
+  right: 0;
+}
+
+.time-slot.selected .box {
+  transform: translateX(0); /* Slide the boxes into view */
+}
+
+.time-slot.selected {
+  border: none;
+}
+
+.time-slot.selected .brown {
+  background-color: gray;
+  margin-right: 3px;
+  color: white ; 
+  border-radius: 5px;/* Added the 3px gap */
+  font-size: 13px;
+}
+
+.time-slot.selected .blue {
+  background-color: blue;
+  margin-left: 3px; /* Added the 3px gap */
+  color: white ; 
+  border-radius: 5px;/* Added the 3px gap */
+  font-size: 13px;
+}
+
+
+/* Style the scrollbar track */
+.time-slots-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the background color of the scrollbar track */
+}
+
+/* Style the scrollbar thumb */
+.time-slots::-webkit-scrollbar-thumb {
+  /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Set the border radius of the scrollbar thumb */
+}
+
+/* Style the scrollbar thumb on hover */
+.time-slots::-webkit-scrollbar-thumb:hover {
+  background-color: #87b31e; /* Set the color of the scrollbar thumb on hover */
+}
